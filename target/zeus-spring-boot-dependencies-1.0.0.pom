@@ -13,14 +13,14 @@
     <url>https://github.com/Hugeman-piexl/zeus-spring-boot-dependencies</url>
     <licenses>
         <license>
-            <name>Apache License, Version 2.0</name>
+            <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
+            <distribution>repo,manual</distribution>
         </license>
     </licenses>
     <developers>
         <developer>
-            <name>Hugeman-piexl</name>
+            <name>happy-life</name>
             <email>d2443651650@outlook.com</email>
             <roles>
                 <role>Developer</role>
@@ -35,13 +35,13 @@
     <distributionManagement>
         <snapshotRepository>
             <!--这个id和settings.xml中servers.server.id要相同，因为上传jar需要登录才有权限-->
-            <id>ossrh</id>
+            <id>${server.id}</id>
             <name>OSS Snapshots Repository</name>
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
             <!--这个id和settings.xml中servers.server.id要相同，因为上传jar需要登录才有权限-->
-            <id>ossrh</id>
+            <id>${server.id}</id>
             <name>OSS Staging Repository</name>
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
@@ -232,6 +232,7 @@
         <selenium.version>3.141.59</selenium.version>
         <selenium-htmlunit.version>2.54.0</selenium-htmlunit.version>
         <sendgrid.version>4.7.6</sendgrid.version>
+        <server.id>ossrh</server.id>
         <servlet-api.version>4.0.1</servlet-api.version>
         <sftp.version>0.1.55</sftp.version>
         <slf4j.version>1.7.33</slf4j.version>
@@ -3092,10 +3093,10 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
+                <version>1.6.8</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>ossrh</serverId>
+                    <serverId>${server.id}</serverId>
                     <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
