@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <name>zeus-spring-boot-dependencies</name>
     <description>Spring Boot Dependencies</description>
-    <url>Not</url>
+    <url>https://github.com/Hugeman-piexl/zeus-spring-boot-dependencies</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
